@@ -102,11 +102,11 @@ streamlit run streamlit_app.py
 ```
 Your browser will automatically open the app at http://localhost:8501.
 
-🧠 Modeling & Results
+🧠 **Modeling & Results** 
 Several models were evaluated:
 | Model             | Performance (R² Score) | Notes                |
 | ----------------- | ---------------------- | -------------------- |
-| **XGBoost**       | **0.92**               | Best performing      |
+| **XGBoost**       | **0.92**               | **Best performing**       |
 | Deep Learning     | \~0.84                 | Good, but not better |
 | Linear Regression | \~0.70                 | Poor generalization  |
 
