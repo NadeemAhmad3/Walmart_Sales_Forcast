@@ -106,11 +106,27 @@ Your browser will automatically open the app at http://localhost:8501.
 Several models were evaluated:
 | Model             | Performance (R² Score) | Notes                |
 | ----------------- | ---------------------- | -------------------- |
-| **XGBoost**       | **0.92**               | **Best performing**       |
+| **XGBoost**       | **0.92**               | **Best performing**  |
 | Deep Learning     | \~0.84                 | Good, but not better |
 | Linear Regression | \~0.70                 | Poor generalization  |
 
+✅ The final deployed model uses **xgb_model.joblib.** 
 
+## 🤝 Contributing
+We welcome contributions!
 
-
+**1.** Fork the repo
+**2.** Create your feature branch
+```bash
+git checkout -b feature/AmazingFeature
+```
+**3.** Commit your changes
+```bash
+git commit -m "Add some AmazingFeature"
+```
+**4.** Push to your branch
+```bash
+git push origin feature/AmazingFeature
+```
+**5.** Open a Pull Request
 
