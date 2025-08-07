@@ -55,7 +55,7 @@ A **sophisticated machine learning project** that forecasts weekly sales for Wal
 
 ---
 
-## ⚙️ Installation & Setup
+**## ⚙️ Installation & Setup**
 1. Clone the Repository
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
