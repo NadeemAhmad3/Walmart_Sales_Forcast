@@ -95,6 +95,7 @@ pip install jupyterlab ipykernel
 jupyter lab
 ```
 Then open .ipynb to walk through data analysis and model training.
+
 **2. Launch the Streamlit App** 
 ```bash
 streamlit run streamlit_app.py
