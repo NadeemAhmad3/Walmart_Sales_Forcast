@@ -1,0 +1,22 @@
+# Core data stack
+pandas==2.2.3
+numpy==1.26.4
+scipy==1.14.1
+
+# Visualisation
+matplotlib==3.9.2
+seaborn==0.13.2
+plotly==5.18.0
+
+# Machine learning
+scikit-learn==1.6.0
+xgboost==2.1.1
+
+# Time-series helpers
+statsmodels==0.14.2
+
+# Jupyter
+jupyterlab==4.3.1
+ipykernel==6.29.5
+
+tensorflow

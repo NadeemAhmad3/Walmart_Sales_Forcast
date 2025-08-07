@@ -1,0 +1,240 @@
+/* --- GLOBAL STYLES & DEFAULTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Set a universal, readable default color for ALL text within the app */
+.stApp {
+    background-color: #121212;
+    color: #EAEAEA; /* A readable light grey for all standard text */
+}
+/* --- ================================== --- */
+/* --- ==    TOP HEADER BAR FIX        == --- */
+/* --- ================================== --- */
+
+/* This targets the main header component provided by Streamlit */
+[data-testid="stHeader"] {
+    background-color: #121212 !important; /* Match the app's main background */
+    box-shadow: none !important;
+    border-bottom: 1px solid #2A2A2A !important;
+}
+
+/* This targets the text ("Running...") and icons (hamburger menu) inside the header */
+[data-testid="stHeader"] * {
+    color: #EAEAEA !important; /* Ensure all text is light */
+    fill: #00BFFF !important; /* Make the menu icon glow with your accent color */
+}
+
+/* --- ================================== --- */
+/* --- ==   SIDEBAR READABILITY FIX    == --- */
+/* --- ================================== --- */
+
+[data-testid="stSidebar"] {
+    background-color: #1E1E1E;
+    border-right: 1px solid #2A2A2A;
+}
+/* Specifically target the H1 element inside the sidebar to control its size */
+[data-testid="stSidebar"] h1 {
+    font-size: 1.75rem !important;  /* <-- This reduces the size */
+   
+}
+
+/* Force ALL text, labels, and widget content in the sidebar to be readable */
+[data-testid="stSidebar"] * {
+    color: #EAEAEA !important;
+}
+
+/* Specifically target the main sidebar title for a glow effect */
+[data-testid="stSidebar"] .st-emotion-cache-16txtl3 {
+    color: #00BFFF !important; /* Deep Sky Blue */
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+}
+
+
+/* --- ================================== --- */
+/* --- == MAIN CONTENT READABILITY FIX == --- */
+/* --- ================================== --- */
+
+/* Use high-specificity selectors to force override Streamlit defaults */
+.stApp h1, .stApp h2, .stApp h3 {
+    color: #FFFFFF !important; /* Pure white for maximum contrast */
+    font-weight: 700;
+}
+
+.stApp h1 {
+    font-size: 2.8rem;
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.4), 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+.stApp h2 {
+    font-size: 1.75rem;
+    border-bottom: 2px solid #00BFFF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+}
+
+.stApp h3 {
+   color: #00BFFF !important;
+   font-size: 1.25rem;
+   text-shadow: 0 0 8px rgba(0, 191, 255, 0.8);
+}
+
+
+/* --- ================================== --- */
+/* --- ==   WIDGET & METRIC STYLING    == --- */
+/* --- ================================== --- */
+
+/* Main prediction metric - use robust test-ids */
+[data-testid="stMetric"] {
+    background-color: transparent;
+    border: 1px solid #2A2A2A;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+}
+[data-testid="stMetricLabel"] {
+    font-size: 1.2rem;
+    color: #00BFFF !important;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(0, 191, 255, 0.6);
+}
+[data-testid="stMetricValue"] {
+    font-size: 3.5rem;
+    color: #FFFFFF !important;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 15px rgba(0, 191, 255, 0.7);
+}
+
+/* Custom container styling */
+.custom-container {
+    background-color: #1E1E1E;
+    border: 1px solid #2A2A2A;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* --- ================================== --- */
+/* --- ==   CONFLICT-FREE TAB STYLING    == --- */
+/* --- ================================== --- */
+
+/* Target the container that holds the tab buttons */
+[data-testid="stTabs"] [role="tablist"] {
+    /* ADDS THE GAP: This creates the necessary space above the tabs */
+    margin-top: 2rem;
+
+    /* THE FIX: Remove the container's border completely. It will NOT draw any lines. */
+    border-bottom: none !important;
+}
+
+/* Target ALL individual tab buttons */
+[data-testid="stTabs"] button {
+    flex-grow: 1; /* Makes them use the full page width */
+    text-align: center;
+
+    /* Font styling for inactive tabs */
+    color: #C0C0C0 !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem;
+
+    /* Remove all default browser styles */
+    background-color: transparent;
+    border: none !important;
+
+    /* THE KEY: Create an INVISIBLE line on ALL buttons. This reserves the
+       space so the layout doesn't jump, but you can't see it. */
+    border-bottom: 3px solid transparent !important;
+
+    padding: 0.75rem 0;
+
+    /* A faster, cleaner transition for the hover effect */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Style for the currently SELECTED tab */
+[data-testid="stTabs"] button[aria-selected="true"] {
+    color: #00BFFF !important;
+    font-weight: 700 !important;
+    text-shadow: 0 0 8px rgba(0, 191, 255, 0.7);
+
+    /* THE ONLY LINE: This turns the invisible border into the visible blue one. */
+    border-bottom-color: #00BFFF !important;
+}
+
+/* A subtle background fade for hovering over NON-SELECTED tabs */
+[data-testid="stTabs"] button:hover:not([aria-selected="true"]) {
+    color: #FFFFFF !important;
+    background-color: #2A2A2A;
+}
+
+/* Info box */
+/* --- REPLACEMENT --- */
+/* Info box */
+.stInfo {
+    background-color: rgba(0, 191, 255, 0.1);
+    border: 1px solid #00BFFF;
+    border-radius: 10px;
+    color: #EAEAEA !important; /* THIS IS THE FIX: Forces the text to be a readable light grey */
+}
+
+/* --- END REPLACEMENT --- */
+/* --- ================================== --- */
+/* --- ==   DATE INPUT THEME FIX       == --- */
+/* --- ================================== --- */
+
+/* Target the container for the date input widget */
+[data-testid="stDateInput"] {
+    /* Ensure the label ("Date") is readable */
+    color: #EAEAEA !important;
+}
+
+/* Target the actual input box where the date is displayed */
+[data-testid="stDateInput"] input {
+    background-color: #1E1E1E !important; /* Dark background */
+    color: #FFFFFF !important;            /* Bright white text for the date */
+    border: 1px solid #2A2A2A !important;  /* Subtle dark border */
+}
+
+/* Target the calendar icon */
+[data-testid="stSidebar"] svg {
+    fill: #00BFFF !important; /* Make ALL icons the glowing accent color */
+    
+    /* Add a glow effect to the icons themselves */
+    filter: drop-shadow(0 0 3px rgba(0, 191, 255, 0.7));
+}
+/* --- ================================== --- */
+/* --- ==    SELECTBOX THEME FIX       == --- */
+/* --- ================================== --- */
+
+/* Target the container for the selectbox to hide its default label */
+[data-testid="stSelectbox"] label {
+    display: none;
+}
+
+/* Target the main clickable box */
+[data-testid="stSelectbox"] > div {
+    background-color: #1E1E1E !important; /* Dark background */
+    border: 1px solid #2A2A2A !important;  /* Subtle dark border */
+    border-radius: 5px !important;
+}
+
+/* Target the text that shows the CURRENTLY selected option */
+/* --- REPLACEMENT --- */
+/* Target the text that shows the CURRENTLY selected option */
+[data-testid="stSelectbox"] p {
+    color: #00BFFF !important;       /* <<<< Changed from white to THEME BLUE */
+    font-weight: 700 !important;     /* Made it slightly bolder */
+    text-shadow: 0 0 6px rgba(0, 191, 255, 0.6); /* Added a subtle glow */
+}
+/* --- END REPLACEMENT --- */
+
+/* Target the little dropdown arrow icon */
+[data-testid="stSelectbox"] svg {
+    fill: #00BFFF !important; /* Make the icon your glowing blue theme color */
+    filter: drop-shadow(0 0 3px rgba(0, 191, 255, 0.7));
+}
+
