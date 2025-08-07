@@ -20,7 +20,7 @@ A sophisticated machine learning project that forecasts weekly sales for Walmart
 
 The core of the project is an XGBoost Regressor model, which proved to be more effective than a deep learning approach for this structured dataset, achieving a high R² score on the validation set.
 
-Live Demo: [Link to your deployed Streamlit App] (<- Add your deployment link here)
+
 
 🌟 Key Features of the Streamlit App
 
