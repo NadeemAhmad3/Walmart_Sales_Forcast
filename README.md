@@ -116,6 +116,7 @@ Several models were evaluated:
 We welcome contributions!
 
 **1.** Fork the repo
+
 **2.** Create your feature branch
 ```bash
 git checkout -b feature/AmazingFeature
@@ -130,3 +131,6 @@ git push origin feature/AmazingFeature
 ```
 **5.** Open a Pull Request
 
+## 📧 Contact
+**Nadeem Ahmad**
+📫 **onedaysuccussfull@gmail.com**
