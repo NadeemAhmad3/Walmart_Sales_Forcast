@@ -10,7 +10,6 @@ A **sophisticated machine learning project** that forecasts weekly sales for Wal
 
 > 💡 The core of the project is an **XGBoost Regressor model**, which outperformed a deep learning model on this structured dataset, achieving a high R² score.
 
-🔗 **Live Demo:** [Click here to launch the app](#) *(Replace with your deployed Streamlit link)*
 
 ---
 
@@ -46,10 +45,17 @@ A **sophisticated machine learning project** that forecasts weekly sales for Wal
 │   ├── stores.csv
 │   ├── train.csv
 │   └── test.csv
-├── Walmart Sales Prediction.ipynb    # Jupyter Notebook for model training
-├── streamlit_app.py                  # Main Streamlit web app
+├── .ipynb    # Jupyter Notebook for model training
+├── app.py                  # Main Streamlit web app
 ├── style.css                         # Custom CSS styling
 ├── requirements.txt                  # Dependencies
 ├── xgb_model.joblib                  # Trained XGBoost model
 ├── scaler.joblib                     # Feature scaler
 └── training_columns.joblib           # Column names used in training
+
+⚙️ Installation & Setup
+1. Clone the Repository
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+
+
