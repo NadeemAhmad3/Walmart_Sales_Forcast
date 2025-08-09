@@ -58,8 +58,8 @@ A **sophisticated machine learning project** that forecasts weekly sales for Wal
 ## ⚙️ Installation & Setup
 **1. Clone the Repository** 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/NadeemAhmad3/Walmart_Sales_Forcast.git
+cd Walmart_Sales_Forcast
 ```
 **2. Create a Virtual Environment (Recommended)**
 ```bash
